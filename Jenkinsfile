@@ -35,7 +35,10 @@ pipeline{
         }
       }
     }
-    stage('codebuild'){
+    stage('deploycode'){
+      when {
+         branch 'develop'
+      }
     	steps{
     	  sh 'cat /etc/passwd'
           sh 'ls -l'
