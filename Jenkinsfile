@@ -26,6 +26,7 @@ pipeline{
         stage('sub-job4'){
           steps{
             sh 'ps -ef'
+            sh 'uptime'
           }
         }
         stage('sub-job5'){
