@@ -20,12 +20,13 @@ pipeline{
         }
         stage('sub-job3'){
           steps{
-            sh 'uptime'
+            sh 'free -g'
           }
         }
         stage('sub-job4'){
           steps{
             sh 'ps -ef'
+            sh 'uptime'
           }
         }
         stage('sub-job5'){
